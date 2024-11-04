@@ -6,7 +6,6 @@ This course is designed for individuals aiming to strengthen their Python skills
 ---
 # Python Programming Course
 
-| **Details**        | **Information**                       |
 |--------------------|---------------------------------------
 | **Course Name**    | Python Programming                   |
 | **Trainer**        | Kamal Kumar Mukiri                   |
@@ -15,6 +14,7 @@ This course is designed for individuals aiming to strengthen their Python skills
 | **Fee**            | 6000/- per head                      |
 | **Platform**       | Google Meet                          |
 | **GitHub Link**    | [GitHub Repository](https://github.com/kamallearner123/APTPYTHNOV08/tree/main))              |
+|--------------------|---------------------------------------
 
 ---
 
