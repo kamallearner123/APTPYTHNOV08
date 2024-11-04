@@ -1,6 +1,7 @@
 # Python Programming Course
 
-Welcome to the Python Programming Course! This course is designed for individuals aiming to strengthen their Python skills over a structured 10-day period, with 3 hours of hands-on learning each day. By the end of this course, you'll have a solid foundation in Python and the confidence to tackle intermediate-level projects.
+Welcome to the Python Programming Course offered by Apt Computing Labs!!!
+This course is designed for individuals aiming to strengthen their Python skills over a structured 10-day period, with 3 hours of hands-on learning each day. By the end of this course, you'll have a solid foundation in Python and the confidence to tackle intermediate-level projects.
 
 ---
 
