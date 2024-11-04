@@ -7,9 +7,9 @@ This course is designed for individuals aiming to strengthen their Python skills
 # Python Programming Course
 
 | **Details**        | **Information**                       |
-|--------------------|---------------------------------------|
-| **Trainer**        | Kamal Kumar Mukiri                   |
+|--------------------|---------------------------------------
 | **Course Name**    | Python Programming                   |
+| **Trainer**        | Kamal Kumar Mukiri                   |
 | **Timings**        | 9:30 am to 12:30 pm (IST)            |
 | **Dates**          | 9th Nov 2024 to 11th Jan 2025        |
 | **Fee**            | 6000/- per head                      |
