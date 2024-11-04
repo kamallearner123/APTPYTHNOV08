@@ -14,7 +14,7 @@ This course is designed for individuals aiming to strengthen their Python skills
 | **Dates**          | 9th Nov 2024 to 11th Jan 2025        |
 | **Fee**            | 6000/- per head                      |
 | **Platform**       | Google Meet                          |
-| **GitHub Link**    | [GitHub Repository](//)              |
+| **GitHub Link**    | [GitHub Repository](https://github.com/kamallearner123/APTPYTHNOV08/tree/main))              |
 
 ---
 
