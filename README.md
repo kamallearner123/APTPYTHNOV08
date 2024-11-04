@@ -14,11 +14,7 @@ This course is designed for individuals aiming to strengthen their Python skills
 | <span style="color:green">**Dates**</span>          | 9th Nov 2024 to 11th Jan 2025        |
 | <span style="color:green">**Fee**</span>            | 6000/- per head                      |
 | <span style="color:green">**Platform**</span>       | Google Meet                          |
-| <span style="color:green">**GitHub Link**</span>    | [GitHub Repository](//)              |
-
----
-
-Welcome to the Python Programming Course! This course is designed to cover key Python concepts, from basics to advanced topics, suitable for learners who want to strengthen their programming skills and take on intermediate-level projects.
+| <span style="color:green">**GitHub Link**</span>    | [GitHub Repository][((https://github.com/kamallearner123/APTPYTHNOV08/edit/main)]            |
 
 ---
 
