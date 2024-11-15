@@ -11,3 +11,8 @@
 After installation, verify the installation by running:
 ```bash
 python3 --version
+
+
+## 2. Installing PIP: (Python Package Manager)
+PIP is required for installing Python modules.
+Follow the guide at How to Install PIP for Python.
