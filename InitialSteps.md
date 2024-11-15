@@ -1,4 +1,4 @@
-##1) Installing Python3: (Interpreter)
+##1) **Installing Python3: (Interpreter)
 1) Go to the link https://www.python.org/downloads/
 2) Choose your operating system and download (Always choose the version 3.7.x. Where 3.x.x means Python 3 version)
 3) Windows: Please check and set the path(where python is installed) in environment variables list. Please refer the below link for more information:
