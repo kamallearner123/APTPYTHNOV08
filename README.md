@@ -11,7 +11,7 @@ This course is designed for individuals aiming to strengthen their Python skills
 | <span style="color:green">**Trainer**</span>        | Kamal Kumar Mukiri                   |
 | <span style="color:green">**Course Name**</span>    | APTPYTHNOV08 (Python Programming)                   |
 | <span style="color:green">**Timings**</span>        | 9:30 am to 12:30 pm (IST)            |
-| <span style="color:green">**Dates**</span>          | 9th Nov 2024 to 11th Jan 2025        |
+| <span style="color:green">**Dates**</span>          | 16th Nov 2024 to 18th Jan 2025        |
 | <span style="color:green">**Days**</span>           | Saturday                             |
 | <span style="color:green">**Fee**</span>            | 6000/- per head                      |
 | <span style="color:green">**Platform**</span>       | Google Meet                          |
