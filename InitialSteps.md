@@ -10,7 +10,7 @@
 
 After installation, verify the installation by running:
 ```bash
-python3 --version
+python3 --version```
 
 
 ## 2. Installing PIP: (Python Package Manager)
