@@ -15,5 +15,13 @@
 # Date   : 23-Nov-2024
 ## Topics : 
       Lists, Tuples, Dictionaries, Sets
-      Reading file and processing data
 ## Tasks to attendees:
+      - Need to solve QA
+      - Need to finish all the assignment questions
+
+# Date   : 30-Nov-2024
+## Topics : 
+      Files, Sets, Json
+## Tasks to attendees:
+      - Need to solve QA
+      - Need to finish all the assignment questions
