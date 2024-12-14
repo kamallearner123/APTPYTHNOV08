@@ -1,0 +1,8 @@
+1) Open file to read
+2) Open file to write
+3) Open file to append the data
+4) Close file
+5) Read the lines into list
+6) Move the curser
+7) Get where is curser
+Appending: New content!!!appending:Andhra Pradesh witnesses a worrying trend of juvenile crime, with 80-90 minors apprehended monthly. A recent case involving three minors kidnapping, raping, and murdering an eight-year-old girl highlights the severity of the issue.

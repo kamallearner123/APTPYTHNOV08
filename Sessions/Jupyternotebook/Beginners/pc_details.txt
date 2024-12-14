@@ -1,0 +1,4 @@
+CPU: Intel Core2 due
+RAM: 2
+Storage: 500
+OS: Windows
