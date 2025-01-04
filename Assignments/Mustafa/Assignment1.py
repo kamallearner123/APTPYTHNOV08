@@ -36,6 +36,7 @@ Example 4:
     Output: true'''
 
 def Solution(expression):
+    print("Received expression: ", expression)
     return True
 
 if __name__ == "__main__":
