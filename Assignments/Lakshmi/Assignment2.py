@@ -17,7 +17,7 @@ Output: "10101"
  '''
 def Solution(a,b):
     print("Hello World")
-    return 0
+    return None
 
 if __name__ == "__main__":
     Solution(a = "11", b = "1")

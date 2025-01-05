@@ -36,7 +36,7 @@ Example 4:
     Output: true'''
 
 def Solution(expression):
-    return True
+    return None
 
 if __name__ == "__main__":
     assert(Solution(expression = "()") == True)

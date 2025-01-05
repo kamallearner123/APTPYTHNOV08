@@ -1,9 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/kamalmukiri/Documents/1.GitHub/Courses/APTPYTHNOV08/Assignments/Kamal/linkedlist'
-relocations:
-  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _insert_node, symObjAddr: 0x0, symBinAddr: 0x100003EA0, symSize: 0xB8 }
-  - { offset: 0x3F, size: 0x8, addend: 0x0, symName: _head, symBinAddr: 0x100008000, symSize: 0x0 }
-  - { offset: 0x75, size: 0x8, addend: 0x0, symName: _insert_node, symObjAddr: 0x0, symBinAddr: 0x100003EA0, symSize: 0xB8 }
-  - { offset: 0xC3, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xB8, symBinAddr: 0x100003F58, symSize: 0x44 }
-...

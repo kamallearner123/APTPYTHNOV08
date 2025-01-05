@@ -9,13 +9,13 @@ def test_assignment1(solution):
     # Before returning print how many are failed
     failed = 0
     print("In test_assignment1")
-    if solution.solution("()") != True:
+    if solution.Solution("()") != True:
         print("Test case 1 failed")
         failed += 1
-    if solution.solution("())") != False:
+    if solution.Solution("())") != False:
         print("Test case 2 failed")
         failed += 1
-    if solution.solution("(())") != True:
+    if solution.Solution("(())") != True:
         print("Test case 3 failed")
         failed += 1
     
@@ -27,16 +27,13 @@ def test_assignment2(solution):
     # Test all the possibliities of the function and print if test case failed
     # Before returning print how many are failed
     failed = 0
-    if solution.solution(1) != 1:
+    if solution.Solution("11", "01") != "100":
         print("Test case 1 failed")
         failed += 1
-    if solution.solution(2) != 1:
+    if solution.Solution("110011", "1100") != "111111":
         print("Test case 2 failed")
         failed += 1
-    if solution.solution(3) != 2:
-        print("Test case 3 failed")
-        failed += 1
-    
+
     if failed == 0:
         print("All test cases passed")
     return failed
@@ -45,32 +42,63 @@ def test_assignment3(solution):
     # Test all the possibliities of the function and print if test case failed
     # Before returning print how many are failed
     failed = 0
-    if solution.solution(1) != 1:
+    if solution.Solution(2) != 2:
         print("Test case 1 failed")
         failed += 1
-    if solution.solution(2) != 1:
+    if solution.Solution(2) != 3:
         print("Test case 2 failed")
-        failed += 1
-    if solution.solution(3) != 2:
-        print("Test case 3 failed")
         failed += 1
     
     if failed == 0:
         print("All test cases passed")
     return failed
 
+
+#Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 def test_assignment4(solution):
     # Test all the possibliities of the function and print if test case failed
     # Before returning print how many are failed
     failed = 0
-    if solution.solution(1) != 1:
+
+    # Test case1
+    l1 = ListNode(1)
+    l2 = ListNode(2)
+    l1.next = l2
+    l3 = ListNode(1)
+    l2.next = l3
+    l4 = ListNode(2)
+    l3.next = l4
+
+    result = solution.Solution(l1)
+    nums = []
+    while result:
+        nums.append(result.val)
+        result = result.next
+    if set(nums) - set(1,2) != set():
         print("Test case 1 failed")
         failed += 1
-    if solution.solution(2) != 1:
+
+
+
+    # Test case2
+    l1 = ListNode(1)
+    l2 = ListNode(1)
+    l1.next = l2
+    l3 = ListNode(1)
+    l2.next = l3
+
+    result = solution.Solution(l1)
+    nums = []
+    while result:
+        nums.append(result.val)
+        result = result.next
+    if set(nums) - set(1) != set():
         print("Test case 2 failed")
-        failed += 1
-    if solution.solution(3) != 2:
-        print("Test case 3 failed")
         failed += 1
     
     if failed == 0:

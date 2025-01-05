@@ -14,11 +14,12 @@ class ListNode(object):
 
 def Solution(mylist):
     print("Hello World")
-    return "PASS"
+    return None
 
 if __name__ == "__main__":
-    l1 = ListNode(1)
-    l2 = ListNode(2)
-    l1.next = l2
+    l1 = [1,2,3]
+    l1.append(100)
+    l2 = l1
+    l1[0] = 1.1
 
     Solution(l1)

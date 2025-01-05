@@ -6,15 +6,20 @@ Given the head of a sorted linked list, delete all duplicates such that each ele
 
 '''
 
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+#Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 def Solution(mylist):
     print("Hello World")
-    return "PASS"
+    return None
 
 if __name__ == "__main__":
-    Solution()
+    l1 = [1,2,3]
+    l1.append(100)
+    l2 = l1
+    l1[0] = 1.1
+
+    Solution(l1)

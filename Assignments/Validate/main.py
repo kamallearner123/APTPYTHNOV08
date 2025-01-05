@@ -6,6 +6,11 @@ import importlib.util
 from time import time
 import run_solution
 import sqlite3
+import pandas as pd
+
+# Configure the base folder path
+base_folder = join('/Users/kamalmukiri/Documents/1.GitHub/Courses/APTPYTHNOV08', 'Assignments')
+
 
 # Register adapter and converter for datetime
 sqlite3.register_adapter(datetime, lambda dt: dt.isoformat())  # Store as ISO format
@@ -18,16 +23,22 @@ if len(sys.argv) > 1:
     folders = [sys.argv[1]]
     print(f"\n\nChecking the solution for {folders}\n")
 else:
-    folders = [f for f in listdir('../') if isdir(join('../', f)) and f != 'Validate']
+    folders = [f for f in listdir(base_folder) if isdir(join(base_folder, f)) and f != 'Validate']
 
 print(folders)
 # open a data base file for sql and create table with Folder name, Program name, time executed, status and time taken to execute
 conn = sqlite3.connect('assignments_updated.db')
 c = conn.cursor()
 
-# Create table if not exists with Name as primary key column, program, time_executed, status and time_taken as columns in the table assignments
-c.execute('''CREATE TABLE IF NOT EXISTS assignments
-                (Name text PRIMARY KEY, program text, time_executed text, status text, time_taken text)''') 
+# Create table if not exists with Name and program as primary key column, program, time_executed, status and time_taken as columns in the table assignments 
+c.execute('''CREATE TABLE IF NOT EXISTS assignments (
+    Name VARCHAR(255),
+    Program VARCHAR(255),
+    Time_Executed TIMESTAMP,
+    Status VARCHAR(50),
+    Time_Taken FLOAT,
+    UNIQUE (Name, Program)
+);''') 
 
 
 # From each folder get files "program1.py", "program2.py", "program3.py" import those as modules and run solution function from each file
@@ -35,7 +46,8 @@ c.execute('''CREATE TABLE IF NOT EXISTS assignments
 def run_programs(folders):
     for folder in folders:
         for i in range(1, 4):
-            spec = importlib.util.spec_from_file_location(f'{folder}.program{i}', f'../{folder}/Assignment{i}.py')
+            AssignmentName = f'Assignment{i}'
+            spec = importlib.util.spec_from_file_location(f'{folder}.program{i}', f'{base_folder}/{folder}/{AssignmentName}.py')
             module = importlib.util.module_from_spec(spec)
             # what is module_from_spec and spec_from_file_location 
             start = time()
@@ -44,15 +56,20 @@ def run_programs(folders):
                 spec.loader.exec_module(module)
                 # pass module to function test_solution which is there in run_solution.py in current directory and collect the result
                 status = run_solution.test_solution(module)
+                if status == 0:
+                    status = 'Passed'
+                else:
+                    status = 'Failed'
 
             except Exception as e:
+                print(e)
                 status = 'Failed'
-                print(f"Error in running {folder}/Assignment{i}.py")
+                print(f"Error in running {folder}/{AssignmentName}.py")
 
             end = time()
             time_taken = end - start
             # update the data if the folder text is already there or create a new row with folder name, program name, time executed, status and time taken
-            c.execute("INSERT OR REPLACE INTO assignments (Name, program, time_executed, status, time_taken) VALUES (?, ?, ?, ?, ?)", (folder, f'program{i}', datetime.now(), status, time_taken))
+            c.execute("INSERT OR REPLACE INTO assignments (Name, Program, Time_Executed, Status, Time_Taken) VALUES (?, ?, ?, ?, ?)", (folder, f'{AssignmentName}', datetime.now(), status, time_taken))
 
             conn.commit()
 
@@ -72,6 +89,9 @@ def get_table():
             f.write(','.join(map(str, row)) + '\n')
 
     conn.close()
+
+    df = pd.read_csv('assignments.csv')
+    print(df)
 
 if __name__ == "__main__":
     run_programs(folders)

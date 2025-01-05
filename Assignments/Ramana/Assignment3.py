@@ -26,7 +26,7 @@ Explanation: There are three ways to climb to the top.
 '''
 def Solution(num):
     print("Hello World")
-    return "PASS"
+    return None
 
 if __name__ == "__main__":
     Solution(10)
