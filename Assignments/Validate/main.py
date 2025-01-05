@@ -9,7 +9,7 @@ import sqlite3
 import pandas as pd
 
 # Configure the base folder path
-base_folder = join('/Users/kamalmukiri/Documents/1.GitHub/Courses/APTPYTHNOV08', 'Assignments')
+base_folder = join('./', '../')
 
 
 # Register adapter and converter for datetime
