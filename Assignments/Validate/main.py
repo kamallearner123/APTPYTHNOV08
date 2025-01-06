@@ -66,6 +66,13 @@ def run_programs(folders):
                 status = 'Failed'
                 print(f"Error in running {folder}/{AssignmentName}.py")
 
+            if status == 'Failed':
+                #print with red color
+                print(f"\033[91m{folder}/{AssignmentName}.py failed\033[0m")
+            else:
+                #print with green color
+                print(f"\033[92m{folder}/{AssignmentName}.py passed\033[0m")
+
             end = time()
             time_taken = end - start
             # update the data if the folder text is already there or create a new row with folder name, program name, time executed, status and time taken
@@ -85,13 +92,20 @@ def get_table():
     # dump rows to a csv file 
     
     with open('assignments.csv', 'w') as f:
+        # write the header
+        f.write(','.join(map(str, ['Name', 'Program', 'Time_Executed', 'Status', 'Time_Taken'])) + '\n')
         for row in rows:
             f.write(','.join(map(str, row)) + '\n')
 
     conn.close()
 
+    # Read the csv file and print the table without index
     df = pd.read_csv('assignments.csv')
-    print(df)
+    # Create a html file from the data frame
+    df.to_html('assignments.html')
+    
+    print(df.to_string(index=False))
+    print("\n\n")
 
 if __name__ == "__main__":
     run_programs(folders)

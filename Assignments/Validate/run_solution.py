@@ -117,16 +117,9 @@ test_solutions = {
 }
 
 def test_solution(soultion):
-    print('Testing solution', soultion)
     prob_statement = re.findall(r".*/(.*)\.py'\>$", str(soultion))
-    try:
-        print(">>> Testing solution for ", prob_statement[0])
-    except IndexError:
-        print### Issue in parsing Testing solution for ", soultion)
-        exit(1)
     # measure the time taken to run the test cases
     start = time()
     failed = test_solutions[prob_statement[0]](soultion)
     end = time()
-    print(f"Time taken to test the solution: {end - start} seconds")
     return failed
