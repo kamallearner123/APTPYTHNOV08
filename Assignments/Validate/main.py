@@ -9,8 +9,9 @@ import sqlite3
 import pandas as pd
 
 # Configure the base folder path
-base_folder = join('./', '../')
-
+BASE_FOLDER = join('./', '../')
+HTML_PAGE = "data/assignments.html"
+CSV_FILE = 'assignments.csv'
 
 # Register adapter and converter for datetime
 sqlite3.register_adapter(datetime, lambda dt: dt.isoformat())  # Store as ISO format
@@ -23,7 +24,7 @@ if len(sys.argv) > 1:
     folders = [sys.argv[1]]
     print(f"\n\nChecking the solution for {folders}\n")
 else:
-    folders = [f for f in listdir(base_folder) if isdir(join(base_folder, f)) and f != 'Validate']
+    folders = [f for f in listdir(BASE_FOLDER) if isdir(join(BASE_FOLDER, f)) and f != 'Validate']
 
 print(folders)
 # open a data base file for sql and create table with Folder name, Program name, time executed, status and time taken to execute
@@ -47,7 +48,7 @@ def run_programs(folders):
     for folder in folders:
         for i in range(1, 4):
             AssignmentName = f'Assignment{i}'
-            spec = importlib.util.spec_from_file_location(f'{folder}.program{i}', f'{base_folder}/{folder}/{AssignmentName}.py')
+            spec = importlib.util.spec_from_file_location(f'{folder}.program{i}', f'{BASE_FOLDER}/{folder}/{AssignmentName}.py')
             module = importlib.util.module_from_spec(spec)
             # what is module_from_spec and spec_from_file_location 
             start = time()
@@ -100,9 +101,9 @@ def get_table():
     conn.close()
 
     # Read the csv file and print the table without index
-    df = pd.read_csv('assignments.csv')
+    df = pd.read_csv(CSV_FILE)
     # Create a html file from the data frame
-    df.to_html('assignments.html')
+    df.to_html(HTML_PAGE)
     
     print(df.to_string(index=False))
     print("\n\n")
