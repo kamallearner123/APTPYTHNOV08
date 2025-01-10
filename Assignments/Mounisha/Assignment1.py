@@ -36,21 +36,7 @@ Example 4:
     Output: true'''
 
 def Solution(expression):
-    stack = []
-    for char in expression:
-        if char in ['(', '{', '[']:
-            stack.append(char)
-        else:
-            if len(stack) == 0:
-                return False
-            if char == ')' and stack[-1] != '(':
-                return False
-            if char == '}' and stack[-1] != '{':
-                return False
-            if char == ']' and stack[-1] != '[':
-                return False
-            stack.pop()
-    return len(stack) == 0
+    pass
 
 if __name__ == "__main__":
     assert(Solution(expression = "()") == True)
