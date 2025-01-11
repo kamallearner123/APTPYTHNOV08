@@ -1,0 +1,17 @@
+{
+    "fruits": [
+        "apple",
+        "banana",
+        "cherry"
+    ],
+    "vegetables": [
+        "carrot",
+        "broccoli",
+        "spinach"
+    ],
+    "grains": [
+        "rice",
+        "wheat",
+        "quinoa"
+    ]
+}
