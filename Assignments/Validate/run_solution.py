@@ -107,13 +107,28 @@ def test_assignment4(solution):
 
     
 
+def test_assignment5(solution):
+    # Test all the possibliities of the function and print if test case failed
+    # Before returning print how many are failed
+    failed = 0
+    if solution.Solution("11", "01") != "100":
+        print("Test case 1 failed")
+        failed += 1
+    if solution.Solution("110011", "1100") != "111111":
+        print("Test case 2 failed")
+        failed += 1
+
+    if failed == 0:
+        print("All test cases passed")
+    return failed
 
 # Dictionary of all problem statements and its test cases function. The function returns number of test cases failed.
 test_solutions = {
     'Assignment1': test_assignment1,
     'Assignment2': test_assignment2,
     'Assignment3': test_assignment3,
-    'Assignment4': test_assignment4
+    'Assignment4': test_assignment4,
+    "Assignment5": test_assignment5
 }
 
 def test_solution(soultion):

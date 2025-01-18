@@ -35,6 +35,7 @@ Example 4:
 
     Output: true'''
 
+<<<<<<< Updated upstream
 def Solution(expression):
     # Stack to keep track of opening brackets
     stack = []
@@ -59,3 +60,16 @@ def Solution(expression):
 if __name__ == "__main__":
     assert(Solution(expression = "()") == True)
     assert(Solution(expression = "()[]{}") == True)
+=======
+class c1:
+    pass
+
+Version = "1.1: Date: 09/09/2021"
+def Solution(expression):
+    print("Solution funciton is getting called with expression = ", expression)
+
+print("Mudule name = ", __name__)
+if __name__ == "__main__": # If Assignment1.py is run directly, then only below code will run
+    Solution(expression = "()") == True
+    Solution(expression = "()[]{}") == True
+>>>>>>> Stashed changes

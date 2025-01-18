@@ -21,7 +21,7 @@ sqlite3.register_converter("timestamp", lambda s: datetime.fromisoformat(s.decod
 # if command line argument is given then use that as the folder name or collect all the folders from the parent directory
 import sys
 if len(sys.argv) > 1:
-    folders = [sys.argv[1]]
+    folders = sys.argv[1:]
     print(f"\n\nChecking the solution for {folders}\n")
 else:
     folders = [f for f in listdir(BASE_FOLDER) if isdir(join(BASE_FOLDER, f)) and f != 'Validate']
