@@ -29,6 +29,7 @@ months = {
     'Dec': 12
 }
 
+
 def get_time(t):
     date = int(t[1])
     month = months[t[2]]
