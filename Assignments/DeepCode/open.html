@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Programming Challenges</h1>
+    <div id="questions"></div>
+    <div id="code-editor" style="margin-top: 20px;">
+        <textarea id="code" cols="80" rows="20">// Write your code here...</textarea><br>
+        <button onclick="submitCode()">Submit Code</button>
+    </div>
+    <div id="output" style="margin-top: 20px;"></div>
+
+    <script>
+        // Fetch Questions
+        async function fetchQuestions() {
+            const response = await axios.get('/api/questions');
+            const questions = response.data;
+            const questionsDiv = document.getElementById('questions');
+            questions.forEach(q => {
+                const qDiv = document.createElement('div');
+                qDiv.innerHTML = `<h3>${q.title}</h3><p>${q.description}</p>`;
+                questionsDiv.appendChild(qDiv);
+            });
+        }
+
+        // Submit Code
+        async function submitCode() {
+            const code = document.getElementById('code').value;
+            const response = await axios.post('/api/submit', {
+                question_id: 1,  // Static ID for now
+                code: code,
+                language: 'python'
+            });
+            document.getElementById('output').innerText = response.data.result;
+        }
+
+        // Initialize
+        fetchQuestions();
+    </script>
+</body>
+</html>
